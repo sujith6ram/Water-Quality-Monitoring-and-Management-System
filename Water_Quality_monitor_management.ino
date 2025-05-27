@@ -45,11 +45,10 @@ void loop() {
         if(phdata != ""){
             String ph = Serial.readStringUntil('$');
            
-            //Serial.println(ph);
             float phvalue=ph.toFloat();
-            //Serial.println();
-            //Serial.println("PH Value");
-            Serial.println(phvalue);
+            Serial.println();
+            Serial.println("PH Value");
+            Serial.println(phvalue); // to display the ph value 
             if(phvalue<15.00){
               digitalWrite(RELAY_PIN, LOW);
               Serial.println("motor is on");
@@ -75,9 +74,6 @@ void loop() {
     Serial.print(" mL/s, Total Volume: ");
     Serial.print(vol1);
     Serial.println(" mL");
-    // if((l_minute1-l_minute2)>=0){
-    // Serial.println("Leakage is detected");
-    // }
   }
 
   // Sensor 2 calculations
@@ -107,7 +103,4 @@ void loop() {
       Serial.println(cost);
     }
   }
-  
-
-  
 }
