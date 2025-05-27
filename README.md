@@ -62,6 +62,5 @@ The system consists of **three modules**:
 
 > Note: Adjust serial input code depending on your pH and TDS sensor communication logic.
 
----
 
 
